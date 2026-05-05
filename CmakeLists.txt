@@ -1,0 +1,29 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 17)
+project(ProjM)
+
+include(${CMAKE_SOURCE_DIR}/CmakeConfigs/Cfg_compiler.cmake)
+include(${CMAKE_SOURCE_DIR}/CmakeConfigs/Cfg_definitions.cmake)
+
+set(SOURCE
+    src/main.cpp
+    src/complex.cpp
+)
+
+set(HEADERS
+)
+set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc -static-libstdc++")
+include_directories(
+    ${SFML_MAIN_DIR}/include
+    ${CMAKE_SOURCE_DIR}/headers
+)
+
+link_directories(${SFML_MAIN_DIR}/lib)
+add_executable(${PROJECT_NAME} ${SOURCE} ${HEADERS})
+
+# set(CMAKE_EXE_LINKER_FLAGS "-static")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
+# target_link_options(${PROJECT_NAME} PRIVATE "-dynamic")
+target_link_libraries(${PROJECT_NAME} ${ALL_LIBRARIES})
+
+# include(${CMAKE_SOURCE_DIR}/CmakeConfigs/Cfg_dlls.cmake)

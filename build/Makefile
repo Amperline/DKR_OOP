@@ -56,10 +56,10 @@ RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\REF\OOP\Lab5
+CMAKE_SOURCE_DIR = E:\REF\OOP\DKR_OOP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\REF\OOP\Lab5\build
+CMAKE_BINARY_DIR = E:\REF\OOP\DKR_OOP\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\REF\OOP\Lab5\build\CMakeFiles E:\REF\OOP\Lab5\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\REF\OOP\DKR_OOP\build\CMakeFiles E:\REF\OOP\DKR_OOP\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\REF\OOP\Lab5\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\REF\OOP\DKR_OOP\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,29 +128,29 @@ ProjM/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/build
 .PHONY : ProjM/fast
 
-src/clist.obj: src/clist.cpp.obj
-.PHONY : src/clist.obj
+src/complex.obj: src/complex.cpp.obj
+.PHONY : src/complex.obj
 
 # target to build an object file
-src/clist.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/clist.cpp.obj
-.PHONY : src/clist.cpp.obj
+src/complex.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/complex.cpp.obj
+.PHONY : src/complex.cpp.obj
 
-src/clist.i: src/clist.cpp.i
-.PHONY : src/clist.i
+src/complex.i: src/complex.cpp.i
+.PHONY : src/complex.i
 
 # target to preprocess a source file
-src/clist.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/clist.cpp.i
-.PHONY : src/clist.cpp.i
+src/complex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/complex.cpp.i
+.PHONY : src/complex.cpp.i
 
-src/clist.s: src/clist.cpp.s
-.PHONY : src/clist.s
+src/complex.s: src/complex.cpp.s
+.PHONY : src/complex.s
 
 # target to generate assembly for a file
-src/clist.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/clist.cpp.s
-.PHONY : src/clist.cpp.s
+src/complex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/complex.cpp.s
+.PHONY : src/complex.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -185,9 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ProjM
-	@echo ... src/clist.obj
-	@echo ... src/clist.i
-	@echo ... src/clist.s
+	@echo ... src/complex.obj
+	@echo ... src/complex.i
+	@echo ... src/complex.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

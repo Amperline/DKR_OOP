@@ -8,6 +8,7 @@ include(${CMAKE_SOURCE_DIR}/CmakeConfigs/Cfg_definitions.cmake)
 set(SOURCE
     src/main.cpp
     src/complex.cpp
+    src/logger.cpp
 )
 
 set(HEADERS

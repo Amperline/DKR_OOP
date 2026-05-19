@@ -1,4 +1,4 @@
-#include "complex.h"
+#include "m_complex.h"
 #include "math.h"
 #include <iostream>
 
@@ -11,6 +11,8 @@ Complex::Complex(Complex_Axes axes, std::string name_for_logger)
     m_angle_radian = atan2(m_axis_I, m_axis_R);
 
     m_logger = new Logger(name_for_logger);
+
+    m_logger->log("Complex number created.");
 }
 
 Complex::Complex(Complex_Exp exp, std::string name_for_logger)
@@ -25,38 +27,40 @@ Complex::Complex(Complex_Exp exp, std::string name_for_logger)
     
     m_axis_R = cos(m_angle_radian) * m_radius;
     m_axis_I = sin(m_angle_radian) * m_radius;
-    
+
     m_logger = new Logger(name_for_logger);
+
+    m_logger->log("Complex number created.");
 }
 
-Complex Complex::addNubers(Complex a, Complex b)
+Complex Complex::addNubers(const Complex& a, const Complex& b)
 {
     double new_axis_R = a.m_axis_R + b.m_axis_R;
     double new_axis_I = a.m_axis_I + b.m_axis_I;
 
     Complex result(Complex::Complex_Axes(new_axis_R, new_axis_I));
+    static_logger.log("Two complex nuber added.");
     return result;
 }
 
-void Complex::show(bool exp)
+std::ostream& operator<<(std::ostream& out, Complex::Complex_Axes form)
 {
-    double angle_degrees = get_Complex_Exp().m_angle_degrees;
-
-
-    if(exp)
-    {
-        std::cout << m_radius << "e^" << (angle_degrees < 0 ? "-" : "+") << "j" << abs(angle_degrees) << "deg";
-    }
-    else
-    {
-        std::cout << m_axis_R << " " << (m_axis_I < 0 ? "-" : "+") << " " << abs(m_axis_I) << "i";
-    }
-    std::cout << std::endl;
+    out << form.m_axis_R << " " << (form.m_axis_I < 0 ? "-" : "+") << " " << abs(form.m_axis_I) << "i";
+    return out;
 }
 
-//nothing to delete or process
+std::ostream& operator<<(std::ostream& out, Complex::Complex_Exp form)
+{
+    out << form.m_radius << "e^" << (form.m_angle_degrees < 0 ? "-" : "+") << "j" << abs(form.m_angle_degrees) << "deg";
+    return out;
+}
+
+//nothing to delete or processs
 Complex::~Complex()
 {
     if(m_logger != nullptr)
+    {
+        m_logger->log("Complex number destroyed.");
         delete m_logger;
+    }
 }

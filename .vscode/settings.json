@@ -3,6 +3,7 @@
     "PATH": "${env:PATH}"
     },
     "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe",
+    "C_Cpp.intelliSenseEngine": "disabled",
     "files.associations": {
         ".fantomasignore": "ignore",
         "iostream": "cpp",

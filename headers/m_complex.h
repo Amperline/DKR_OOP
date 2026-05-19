@@ -1,7 +1,7 @@
 #ifndef M_COMPLEX
 #define M_COMPLEX
-#include <ostream>
 #include "logger.h"
+#include <ostream>
 
 #define PI 3.14159265359
 
@@ -42,8 +42,9 @@ public:
     Complex_Axes get_Complex_Axes() 
     {return Complex_Axes(m_axis_R, m_axis_I);}
 
-    static Complex addNubers(Complex a, Complex b);
+    static Complex addNubers(const Complex& a, const Complex& b);
 
-    void show(bool exp = false);
+    friend std::ostream& operator<<(std::ostream& out, Complex::Complex_Axes form);
+    friend std::ostream& operator<<(std::ostream& out, Complex::Complex_Exp form);
 };
 #endif

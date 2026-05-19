@@ -2,14 +2,17 @@
 #define M_LOGGER
 #include <string>
 
-static unsigned int m_number_of_logs = 0;
+
+inline unsigned int m_number_of_logs = 0;
 
 class Logger
 {
 private:
+    bool global_logger_active = false;
     bool first_log_create = false;
     std::string m_filename;
     std::fstream* file = nullptr;
+
 public:
     Logger(std::string filename);
     ~Logger();
@@ -17,4 +20,5 @@ public:
     void log(std::string data);
 };
 
+inline Logger static_logger("static_log");
 #endif

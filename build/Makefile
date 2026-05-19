@@ -128,30 +128,6 @@ ProjM/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/build
 .PHONY : ProjM/fast
 
-src/complex.obj: src/complex.cpp.obj
-.PHONY : src/complex.obj
-
-# target to build an object file
-src/complex.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/complex.cpp.obj
-.PHONY : src/complex.cpp.obj
-
-src/complex.i: src/complex.cpp.i
-.PHONY : src/complex.i
-
-# target to preprocess a source file
-src/complex.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/complex.cpp.i
-.PHONY : src/complex.cpp.i
-
-src/complex.s: src/complex.cpp.s
-.PHONY : src/complex.s
-
-# target to generate assembly for a file
-src/complex.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/complex.cpp.s
-.PHONY : src/complex.cpp.s
-
 src/logger.obj: src/logger.cpp.obj
 .PHONY : src/logger.obj
 
@@ -175,6 +151,30 @@ src/logger.s: src/logger.cpp.s
 src/logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/logger.cpp.s
 .PHONY : src/logger.cpp.s
+
+src/m_complex.obj: src/m_complex.cpp.obj
+.PHONY : src/m_complex.obj
+
+# target to build an object file
+src/m_complex.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/m_complex.cpp.obj
+.PHONY : src/m_complex.cpp.obj
+
+src/m_complex.i: src/m_complex.cpp.i
+.PHONY : src/m_complex.i
+
+# target to preprocess a source file
+src/m_complex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/m_complex.cpp.i
+.PHONY : src/m_complex.cpp.i
+
+src/m_complex.s: src/m_complex.cpp.s
+.PHONY : src/m_complex.s
+
+# target to generate assembly for a file
+src/m_complex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjM.dir\build.make CMakeFiles/ProjM.dir/src/m_complex.cpp.s
+.PHONY : src/m_complex.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -209,12 +209,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ProjM
-	@echo ... src/complex.obj
-	@echo ... src/complex.i
-	@echo ... src/complex.s
 	@echo ... src/logger.obj
 	@echo ... src/logger.i
 	@echo ... src/logger.s
+	@echo ... src/m_complex.obj
+	@echo ... src/m_complex.i
+	@echo ... src/m_complex.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

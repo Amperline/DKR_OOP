@@ -1,0 +1,20 @@
+[
+{
+  "directory": "E:/REF/OOP/DKR_OOP/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/ProjM.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\ProjM.dir\\src\\main.cpp.obj -c E:\\REF\\OOP\\DKR_OOP\\src\\main.cpp",
+  "file": "E:/REF/OOP/DKR_OOP/src/main.cpp",
+  "output": "CMakeFiles/ProjM.dir/src/main.cpp.obj"
+},
+{
+  "directory": "E:/REF/OOP/DKR_OOP/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/ProjM.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\ProjM.dir\\src\\m_complex.cpp.obj -c E:\\REF\\OOP\\DKR_OOP\\src\\m_complex.cpp",
+  "file": "E:/REF/OOP/DKR_OOP/src/m_complex.cpp",
+  "output": "CMakeFiles/ProjM.dir/src/m_complex.cpp.obj"
+},
+{
+  "directory": "E:/REF/OOP/DKR_OOP/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/ProjM.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\ProjM.dir\\src\\logger.cpp.obj -c E:\\REF\\OOP\\DKR_OOP\\src\\logger.cpp",
+  "file": "E:/REF/OOP/DKR_OOP/src/logger.cpp",
+  "output": "CMakeFiles/ProjM.dir/src/logger.cpp.obj"
+}
+]

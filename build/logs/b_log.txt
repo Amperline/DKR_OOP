@@ -1,0 +1,4 @@
+START LOG
+[195182113 ms from start] Complex number created.
+[195204915 ms from start] Complex number destroyed.
+END LOG

@@ -1,0 +1,7 @@
+compilation_database_dir: build
+diagrams:
+  my_architecture:
+    type: class
+    glob:
+      - src/*.cpp
+      - headers/*.h

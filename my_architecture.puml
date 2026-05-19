@@ -1,0 +1,75 @@
+@startuml
+class "std::char_traits<char>" as C_0007500688229146332176
+class C_0007500688229146332176 {
+__
+}
+class "std::allocator<char>" as C_0000465838628272370621
+class C_0000465838628272370621 {
+__
+}
+class "std::string" as C_0005016775666417918015
+class C_0005016775666417918015 {
+__
+}
+class "std::basic_fstream<char,std::char_traits<char>>" as C_0004354077335953015778
+class C_0004354077335953015778 {
+__
+}
+class "Logger" as C_0002476766866792568373
+class C_0002476766866792568373 {
++Logger(std::string filename) : void
++~Logger() : void
+..
++log(std::string data) : void
+__
+-file : std::fstream *
+-first_log_create : bool
+{static} -global_logger_active : bool
+-m_filename : std::string
+}
+class "Complex" as C_0005856396249456108951
+class C_0005856396249456108951 {
++Complex(Complex_Axes axes, std::string name_for_logger = "") : void
++Complex(Complex_Exp exp, std::string name_for_logger = "") : void
++~Complex() : void
+..
+{static} +addNubers(const Complex & a, const Complex & b) : Complex
++get_Complex_Axes() : Complex_Axes
++get_Complex_Exp() : Complex_Exp
+__
+-m_angle_radian : double
+-m_axis_I : double
+-m_axis_R : double
+-m_logger : Logger *
+-m_radius : double
+}
+class "Complex::Complex_Axes" as C_0000683834965564367629
+class C_0000683834965564367629 {
++Complex_Axes(double axis_R, double axis_I) : void
+__
++m_axis_I : double
++m_axis_R : double
+}
+class "Complex::Complex_Exp" as C_0010050557485104927071
+class C_0010050557485104927071 {
++Complex_Exp(double radius, double angle_degrees) : void
+__
++m_angle_degrees : double
++m_radius : double
+}
+C_0005016775666417918015 ..> C_0007500688229146332176
+C_0005016775666417918015 ..> C_0000465838628272370621
+C_0004354077335953015778 ..> C_0007500688229146332176
+C_0002476766866792568373 o-- C_0005016775666417918015 : -m_filename
+C_0002476766866792568373 --> C_0007500688229146332176 : -file
+C_0002476766866792568373 --> C_0004354077335953015778 : -file
+C_0005856396249456108951 ..> C_0000683834965564367629
+C_0005856396249456108951 ..> C_0005016775666417918015
+C_0005856396249456108951 ..> C_0010050557485104927071
+C_0005856396249456108951 --> C_0002476766866792568373 : -m_logger
+C_0000683834965564367629 --+ C_0005856396249456108951
+C_0010050557485104927071 --+ C_0005856396249456108951
+
+'Generated with clang-uml, version 0.6.2
+'LLVM version clang version 20.1.7 (https://github.com/llvm/llvm-project.git 6146a88f60492b520a36f8f8f3231e15f3cc6082)
+@enduml

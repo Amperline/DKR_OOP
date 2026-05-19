@@ -1,2 +1,0 @@
-START LOG
-[196368717 ms from start] Complex number created.

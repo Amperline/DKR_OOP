@@ -68,9 +68,6 @@ try
 
         //encryption
         write_Obj_Data(res, "result");
-
-        static_logger.log("END LOG");
-
     }
     else if(variant == 2)
     {
